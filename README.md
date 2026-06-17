@@ -1,4 +1,10 @@
-# Algebraconda 🐍
+```
+,---.|              |                                 |     
+|---||    ,---.,---.|---.,---.,---.,---.,---.,---.,---|,---.
+|   ||    |   ||---'|   ||    ,---||    |   ||   ||   |,---|
+`   '`---'`---|`---'`---'`    `---^`---'`---'`   '`---'`---^
+          `---'                                             
+```
 
 > A browser-based Snake game where you slither through a grid collecting numbers and operators to hit a target value.
 
