@@ -1,4 +1,17 @@
-# Algebraconda 🐍
+```
+,---.|              |                                 |     
+|---||    ,---.,---.|---.,---.,---.,---.,---.,---.,---|,---.
+|   ||    |   ||---'|   ||    ,---||    |   ||   ||   |,---|
+`   '`---'`---|`---'`---'`    `---^`---'`---'`   '`---'`---^
+          `---'                                             
+```
+
+[![Tests](https://github.com/clovisphere/algebraconda/actions/workflows/test.yml/badge.svg)](https://github.com/clovisphere/algebraconda/actions)
+[![Release](https://github.com/clovisphere/algebraconda/actions/workflows/release.yml/badge.svg)](https://github.com/clovisphere/algebraconda/actions/workflows/release.yml)
+[![Docker](https://github.com/clovisphere/algebraconda/actions/workflows/docker.yml/badge.svg)](https://github.com/clovisphere/algebraconda/actions/workflows/docker.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Bun](https://img.shields.io/badge/Bun-1.2-black?logo=bun)](https://bun.sh)
+[![Vanilla JS](https://img.shields.io/badge/Vanilla_JS-ES2020-yellow?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 > A browser-based Snake game where you slither through a grid collecting numbers and operators to hit a target value.
 
@@ -33,17 +46,54 @@ Collect `6`, then `×`, then `4` → `6 × 4 = 24` ✓
 
 Speed increases with every solve and drops on a miss.
 
-## Getting Started
+## Tech stack
+
+| | |
+|---|---|
+| Language | Vanilla JavaScript (ES2020+, ES Modules) |
+| Rendering | HTML · CSS (no framework) |
+| Runtime | [Bun](https://bun.sh) — dev server and test runner |
+| Tests | `bun:test` |
+| Container | Docker |
+
+## Run locally
+
+**With Bun** — requires [Bun](https://bun.sh):
 
 ```bash
-bun server.js   # serve at http://localhost:3000
-bun test        # run the test suite
+bun server.js
 ```
 
-Requires [Bun](https://bun.sh). No other dependencies.
+**With Docker:**
+
+```bash
+make run   # builds the image and starts the container
+make stop  # stop and remove the container
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Run tests
+
+```bash
+bun test
+# or
+make test
+```
+
+## TODO
+
+- [ ] End-to-end tests (Playwright)
+- [x] App versioning and release manifest
+- [x] CI/CD pipeline (GitHub Actions — run tests, build and push image to Docker Hub; release triggered on merge to `main`)
+- [x] Custom favicon
+- [ ] PWA support
+- [ ] Rethink layout for larger screens — current design is mobile-first and feels cramped on desktop
 
 ## Inspiration
 
-- Classic Snake
-- *Des Chiffres et des Lettres* (the numbers round)
-- Mental arithmetic puzzle games
+This project draws inspiration from:
+
+- Classic Snake and its simple, highly replayable gameplay loop
+- [Des Chiffres et des Lettres](https://www.france.tv/france-3/des-chiffres-et-des-lettres/) (specifically the numbers round), where players combine arithmetic operations to reach a target value
+- Mental arithmetic and number-puzzle games that reward pattern recognition, strategy, and quick thinking

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- background -->
+  <rect width="64" height="64" rx="14" fill="#e7f3e6"/>
+  <!-- body -->
+  <ellipse cx="28" cy="42" rx="18" ry="13" fill="#5fb588"/>
+  <!-- head -->
+  <ellipse cx="42" cy="26" rx="17" ry="15" fill="#3f9d6a"/>
+  <!-- eyes -->
+  <circle cx="36" cy="22" r="4.5" fill="white"/>
+  <circle cx="47" cy="22" r="4.5" fill="white"/>
+  <circle cx="37" cy="23" r="2.2" fill="#173b27"/>
+  <circle cx="48" cy="23" r="2.2" fill="#173b27"/>
+  <!-- tongue -->
+  <line x1="26" y1="27" x2="19" y2="23" stroke="#e8556b" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="27" x2="19" y2="31" stroke="#e8556b" stroke-width="2" stroke-linecap="round"/>
+  <line x1="30" y1="26" x2="26" y2="27" stroke="#e8556b" stroke-width="2" stroke-linecap="round"/>
+</svg>
