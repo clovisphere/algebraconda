@@ -207,6 +207,9 @@ export function helpHTML(title) {
 }
 
 export function fitStage() {
-  const s = Math.min((window.innerWidth - 20) / 412, (window.innerHeight - 20) / 824, 1.18);
+  const wide = window.innerWidth >= 900;
+  $('#app').classList.toggle('wide', wide);
+  const W = wide ? 1160 : 412, H = wide ? 720 : 824;
+  const s = Math.min((window.innerWidth - 32) / W, (window.innerHeight - 32) / H, wide ? 1.35 : 1.18);
   $('#app').style.transform = 'scale(' + s + ')';
 }
