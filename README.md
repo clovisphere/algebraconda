@@ -81,6 +81,7 @@ make test
 - [ ] CI/CD pipeline (GitHub Actions — run tests, build and push image to Docker Hub; release triggered on merge to `main`)
 - [ ] Custom favicon
 - [ ] PWA support
+- [ ] Rethink layout for larger screens — current design is mobile-first and feels cramped on desktop
 
 ## Inspiration
 
