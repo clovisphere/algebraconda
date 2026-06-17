@@ -148,7 +148,7 @@ body{
 .flash.good{background:radial-gradient(circle,rgba(120,220,150,.0),rgba(90,210,140,.35));animation:flash .5s ease;}
 @keyframes flash{0%{opacity:0}30%{opacity:1}100%{opacity:0}}
 
-.ent{position:absolute;left:0;top:0;width:var(--cell);height:var(--cell);display:flex;align-items:center;justify-content:center;transition:transform .075s linear;will-change:transform;}
+.ent{position:absolute;left:0;top:0;width:var(--cell);height:var(--cell);display:flex;align-items:center;justify-content:center;transition:transform .075s linear,opacity .075s linear;will-change:transform;}
 .ent.notrans{transition:none;}
 .box{width:84%;height:84%;display:flex;align-items:center;justify-content:center;font-family:'Fredoka';font-weight:600;font-size:calc(var(--cell)*.42);position:relative;}
 .box.num{background:var(--num-bg);color:var(--num-fg);border-radius:50%;box-shadow:0 3px 0 rgba(0,0,0,.14);}
