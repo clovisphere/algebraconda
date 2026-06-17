@@ -90,7 +90,7 @@ make test
 - [x] Custom favicon
 - [ ] PWA support
 - [ ] Rethink layout for larger screens — current design is mobile-first and feels cramped on desktop
-- [ ] Wall wrapping — hitting a wall should teleport the snake to the opposite side instead of costing a life
+- [x] Wall wrapping — hitting a wall teleports the snake to the opposite side instead of costing a life
 
 ## Inspiration
 
