@@ -90,6 +90,8 @@ make test
 
 ## Inspiration
 
-- Classic Snake
-- [*Des Chiffres et des Lettres*](https://www.france.tv/france-3/des-chiffres-et-des-lettres/) (the numbers round)
-- Mental arithmetic puzzle games
+This project draws inspiration from:
+
+- Classic Snake and its simple, highly replayable gameplay loop
+- [Des Chiffres et des Lettres](https://www.france.tv/france-3/des-chiffres-et-des-lettres/) (specifically the numbers round), where players combine arithmetic operations to reach a target value
+- Mental arithmetic and number-puzzle games that reward pattern recognition, strategy, and quick thinking
