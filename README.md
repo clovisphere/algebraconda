@@ -82,8 +82,8 @@ make test
 ## TODO
 
 - [ ] End-to-end tests (Playwright)
-- [ ] App versioning and release manifest
-- [ ] CI/CD pipeline (GitHub Actions — run tests, build and push image to Docker Hub; release triggered on merge to `main`)
+- [x] App versioning and release manifest
+- [x] CI/CD pipeline (GitHub Actions — run tests, build and push image to Docker Hub; release triggered on merge to `main`)
 - [x] Custom favicon
 - [ ] PWA support
 - [ ] Rethink layout for larger screens — current design is mobile-first and feels cramped on desktop
