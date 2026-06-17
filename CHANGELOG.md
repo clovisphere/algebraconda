@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0](https://github.com/clovisphere/algebraconda/compare/v1.0.0...v1.1.0) (2026-06-17)
+
+
+### Features
+
+* **snake:** smooth wall-wrap traversal with entry/exit ghost animation ([a2c8db9](https://github.com/clovisphere/algebraconda/commit/a2c8db9147db94f8279b5dab9acad20e8950074f))
+* **snake:** wrap snake through walls instead of crashing ([90e6508](https://github.com/clovisphere/algebraconda/commit/90e65086687300b518c51eee63938bb1c98b78c8))
+* **snake:** wrap snake through walls instead of crashing ([04d791b](https://github.com/clovisphere/algebraconda/commit/04d791b19bf2da18c8a562257ad8a55387eaa4ad))
+
 ## 1.0.0 (2026-06-17)
 
 
