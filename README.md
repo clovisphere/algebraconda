@@ -39,6 +39,16 @@ Collect `6`, then `×`, then `4` → `6 × 4 = 24` ✓
 
 Speed increases with every solve and drops on a miss.
 
+## Tech stack
+
+| | |
+|---|---|
+| Language | Vanilla JavaScript (ES2020+, ES Modules) |
+| Rendering | HTML · CSS (no framework) |
+| Runtime | [Bun](https://bun.sh) — dev server and test runner |
+| Tests | `bun:test` |
+| Container | Docker |
+
 ## Run locally
 
 **With Bun** — requires [Bun](https://bun.sh):
