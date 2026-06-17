@@ -78,7 +78,7 @@ make test
 
 - [ ] End-to-end tests (Playwright)
 - [ ] App versioning and release manifest
-- [ ] CI/CD pipeline (GitHub Actions — run tests, build and push image to Docker Hub)
+- [ ] CI/CD pipeline (GitHub Actions — run tests, build and push image to Docker Hub; release triggered on merge to `main`)
 - [ ] Custom favicon
 - [ ] PWA support
 
