@@ -74,6 +74,14 @@ bun test
 make test
 ```
 
+## TODO
+
+- [ ] End-to-end tests (Playwright)
+- [ ] App versioning and release manifest
+- [ ] CI/CD pipeline (GitHub Actions — run tests, build and push image to Docker Hub)
+- [ ] Custom favicon
+- [ ] PWA support
+
 ## Inspiration
 
 - Classic Snake
