@@ -160,7 +160,6 @@ function step() {
   if (!G.running) return;
   G.dir = G.nextDir;
   const pos = nextHead(G.snake, G.dir, COLS, ROWS);
-  if (!pos) { crash(); schedule(); return; }
   if (collidesWithSelf(G.snake, pos)) { crash(); schedule(); return; }
   const ti = G.tiles.findIndex(t => t.x === pos.x && t.y === pos.y);
   if (ti >= 0) { eatTile(ti, pos); schedule(); return; }

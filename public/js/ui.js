@@ -173,7 +173,7 @@ export function helpHTML(title) {
     <div class="ov-sub" style="text-align:left;max-width:300px;">
       Eat a number, an operator, a number… to build a running total up to the <b style="color:var(--target)">MAKE</b> number — hit it and it auto-scores.<br><br>
       🔁 Only your <b>latest</b> number &amp; operator count — wrong bite? Just eat the right one next.<br>
-      🧱 Walls, your own tail, or the clock running out each cost a life.<br>
+      🌀 Hitting a wall wraps you to the opposite side — no penalty. Your own tail or the clock running out costs a life.<br>
       🌍 Climb Garden → Twilight → Inferno, where the <b>eraser</b> and <b>( )</b> unlock.
     </div>
     ${paused

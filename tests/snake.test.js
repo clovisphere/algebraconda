@@ -29,20 +29,20 @@ describe('nextHead — movement', () => {
   });
 });
 
-describe('nextHead — wall collisions', () => {
-  it('returns null at right wall', () => {
-    expect(nextHead([{ x: COLS - 1, y: 5 }], { x: 1, y: 0 }, COLS, ROWS)).toBeNull();
+describe('nextHead — wall wrapping', () => {
+  it('wraps from right wall to left', () => {
+    expect(nextHead([{ x: COLS - 1, y: 5 }], { x: 1, y: 0 }, COLS, ROWS)).toEqual({ x: 0, y: 5 });
   });
-  it('returns null at left wall', () => {
-    expect(nextHead([{ x: 0, y: 5 }], { x: -1, y: 0 }, COLS, ROWS)).toBeNull();
+  it('wraps from left wall to right', () => {
+    expect(nextHead([{ x: 0, y: 5 }], { x: -1, y: 0 }, COLS, ROWS)).toEqual({ x: COLS - 1, y: 5 });
   });
-  it('returns null at top wall', () => {
-    expect(nextHead([{ x: 5, y: 0 }], { x: 0, y: -1 }, COLS, ROWS)).toBeNull();
+  it('wraps from top wall to bottom', () => {
+    expect(nextHead([{ x: 5, y: 0 }], { x: 0, y: -1 }, COLS, ROWS)).toEqual({ x: 5, y: ROWS - 1 });
   });
-  it('returns null at bottom wall', () => {
-    expect(nextHead([{ x: 5, y: ROWS - 1 }], { x: 0, y: 1 }, COLS, ROWS)).toBeNull();
+  it('wraps from bottom wall to top', () => {
+    expect(nextHead([{ x: 5, y: ROWS - 1 }], { x: 0, y: 1 }, COLS, ROWS)).toEqual({ x: 5, y: 0 });
   });
-  it('does not wrap — step just inside right wall is valid', () => {
+  it('normal move inside the grid is unaffected', () => {
     expect(nextHead([{ x: COLS - 2, y: 5 }], { x: 1, y: 0 }, COLS, ROWS)).toEqual({ x: COLS - 1, y: 5 });
   });
 });

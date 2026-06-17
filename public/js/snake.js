@@ -5,11 +5,11 @@ export function createSnake(cols = COLS, rows = ROWS) {
   return [{ x: Math.floor(cols / 2), y: Math.floor(rows / 2) }];
 }
 
-// Returns the new head position, or null if it would leave the grid.
 export function nextHead(snake, dir, cols = COLS, rows = ROWS) {
-  const nx = snake[0].x + dir.x, ny = snake[0].y + dir.y;
-  if (nx < 0 || ny < 0 || nx >= cols || ny >= rows) return null;
-  return { x: nx, y: ny };
+  return {
+    x: (snake[0].x + dir.x + cols) % cols,
+    y: (snake[0].y + dir.y + rows) % rows,
+  };
 }
 
 // Checks all segments except the last tail cell (which will vacate on the same tick).
