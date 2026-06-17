@@ -6,6 +6,8 @@
           `---'                                             
 ```
 
+[![Tests](https://github.com/clovisphere/algebraconda/actions/workflows/test.yml/badge.svg)](https://github.com/clovisphere/algebraconda/actions)
+
 > A browser-based Snake game where you slither through a grid collecting numbers and operators to hit a target value.
 
 Navigate a hungry serpent through a grid of numbers and operators, collecting the pieces needed to build an equation that matches the **Magic Number**.
