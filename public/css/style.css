@@ -62,10 +62,6 @@ body{
 #app[data-screen="menu"] #menu{display:flex;}
 #app[data-screen="game"] #game{display:flex;}
 
-.statusbar{height:30px;flex:none;display:flex;align-items:center;justify-content:space-between;padding:8px 24px 0;font-weight:800;font-size:13px;color:var(--ink);opacity:.85;}
-.statusbar .batt{width:20px;height:11px;border:2px solid currentColor;border-radius:3px;position:relative;}
-.statusbar .batt::after{content:"";position:absolute;inset:1.5px 4px 1.5px 1.5px;background:currentColor;border-radius:1px;}
-
 /* ---------- MENU ---------- */
 #menu{align-items:center;justify-content:flex-start;text-align:center;padding:6px 30px 28px;overflow-y:auto;}
 .tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:18px;font-weight:800;}
