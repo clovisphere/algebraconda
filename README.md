@@ -51,5 +51,5 @@ Requires [Bun](https://bun.sh). No other dependencies.
 ## Inspiration
 
 - Classic Snake
-- *Des Chiffres et des Lettres* (the numbers round)
+- [*Des Chiffres et des Lettres*](https://www.france.tv/france-3/des-chiffres-et-des-lettres/) (the numbers round)
 - Mental arithmetic puzzle games
