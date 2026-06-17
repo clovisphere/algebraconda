@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/clovisphere/algebraconda/compare/v1.1.0...v1.2.0) (2026-06-17)
+
+
+### Features
+
+* **ui:** add responsive desktop layout for screens ≥ 900 px ([c56db28](https://github.com/clovisphere/algebraconda/commit/c56db28f64b4a92ef6ea50bc625e58260a6590bd))
+
 ## [1.1.0](https://github.com/clovisphere/algebraconda/compare/v1.0.0...v1.1.0) (2026-06-17)
 
 
