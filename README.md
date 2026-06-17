@@ -89,7 +89,7 @@ make test
 - [x] CI/CD pipeline (GitHub Actions — run tests, build and push image to Docker Hub; release triggered on merge to `main`)
 - [x] Custom favicon
 - [ ] PWA support
-- [ ] Rethink layout for larger screens — current design is mobile-first and feels cramped on desktop
+- [x] Rethink layout for larger screens — current design is mobile-first and feels cramped on desktop
 - [x] Wall wrapping — hitting a wall teleports the snake to the opposite side instead of costing a life
 
 ## Inspiration

@@ -15,34 +15,38 @@
 
   <!-- ===================== MENU ===================== -->
   <section id="menu" class="screen">
-    <div style="flex:1;display:flex;flex-direction:column;align-items:center;width:100%;">
-      <div class="tag">Slither · Solve · Survive</div>
-      <div class="wordmark">Algebraconda</div>
-      <div class="byline">built by <a href="https://github.com/clovisphere" target="_blank" rel="noopener" class="byline-link"><b>Clovisphere</b></a></div>
+    <div class="menu-inner">
+      <div class="menu-brand">
+        <div class="tag">Slither · Solve · Survive</div>
+        <div class="wordmark">Algebraconda</div>
+        <div class="byline">built by <a href="https://github.com/clovisphere" target="_blank" rel="noopener" class="byline-link"><b>Clovisphere</b></a></div>
 
-      <div class="mascot">
-        <div class="m-body"></div>
-        <div class="m-belly"></div>
-        <div class="m-head">
-          <div class="eyes"><i></i><i></i></div>
-          <div class="m-tongue"></div>
+        <div class="mascot">
+          <div class="m-body"></div>
+          <div class="m-belly"></div>
+          <div class="m-head">
+            <div class="eyes"><i></i><i></i></div>
+            <div class="m-tongue"></div>
+          </div>
         </div>
       </div>
 
-      <button class="btn btn-play" id="playBtn">Play</button>
-      <button class="btn btn-ghost" id="helpBtn">How to play</button>
+      <div class="menu-actions">
+        <button class="btn btn-play" id="playBtn">Play</button>
+        <button class="btn btn-ghost" id="helpBtn">How to play</button>
 
-      <div class="journey">
-        <div class="node garden active"><div class="dot"></div><div class="nm">Garden</div><small>Start</small></div>
-        <div class="link"></div>
-        <div class="node twilight"><div class="dot"></div><div class="nm">Twilight</div><small>100 pts</small></div>
-        <div class="link"></div>
-        <div class="node inferno"><div class="dot"></div><div class="nm">Inferno</div><small>250 pts</small></div>
-      </div>
+        <div class="journey">
+          <div class="node garden active"><div class="dot"></div><div class="nm">Garden</div><small>Start</small></div>
+          <div class="link"></div>
+          <div class="node twilight"><div class="dot"></div><div class="nm">Twilight</div><small>100 pts</small></div>
+          <div class="link"></div>
+          <div class="node inferno"><div class="dot"></div><div class="nm">Inferno</div><small>250 pts</small></div>
+        </div>
 
-      <div class="menu-foot">
-        <div class="best">Best <b id="bestMenu">0</b></div>
-        <button class="iconbtn" id="muteBtn" title="Sound">♪</button>
+        <div class="menu-foot">
+          <div class="best">Best <b id="bestMenu">0</b></div>
+          <button class="iconbtn" id="muteBtn" title="Sound">♪</button>
+        </div>
       </div>
     </div>
   </section>
@@ -83,6 +87,12 @@
     </div>
 
     <div class="controls">
+      <div class="legend">
+        <div class="leg-item"><span class="leg-chip num">5</span>Number</div>
+        <div class="leg-item"><span class="leg-chip op">+</span>Operator</div>
+        <div class="leg-item twilight-plus"><span class="leg-chip par">( )</span>Group · Twilight+</div>
+        <div class="leg-item twilight-plus"><span class="leg-chip eraser"><span class="er"></span></span>Undo · Twilight+</div>
+      </div>
       <div class="hint">Arrow keys, swipe, or tap the pad</div>
       <div class="dpad">
         <button class="u" data-dir="up">▲</button>
