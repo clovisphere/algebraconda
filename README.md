@@ -7,7 +7,7 @@
 ```
 
 [![Tests](https://github.com/clovisphere/algebraconda/actions/workflows/test.yml/badge.svg)](https://github.com/clovisphere/algebraconda/actions)
-[![Release](https://github.com/clovisphere/algebraconda/actions/workflows/release.yml/badge.svg)](https://github.com/clovisphere/algebraconda/actions/workflows/release.yml)
+[![Release](https://img.shields.io/github/v/release/clovisphere/algebraconda)](https://github.com/clovisphere/algebraconda/releases)
 [![Docker](https://github.com/clovisphere/algebraconda/actions/workflows/docker.yml/badge.svg)](https://github.com/clovisphere/algebraconda/actions/workflows/docker.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Bun](https://img.shields.io/badge/Bun-1.2-black?logo=bun)](https://bun.sh)
