@@ -152,6 +152,7 @@ function render() {
   renderRibbon({ tokens: ft, total: totalValue(), solved: isSolved(), pendingOp: curFrame().op, openGroups: G.frames.length > 1 });
   renderGrid(G, cell, ft);
   G.noTrans = false;
+  G.wrapGhost = null;
 }
 
 function schedule() { clearTimeout(tickTimer); if (G.running) tickTimer = setTimeout(step, G.tickMs); }
@@ -160,8 +161,14 @@ function step() {
   if (!G.running) return;
   G.dir = G.nextDir;
   const pos = nextHead(G.snake, G.dir, COLS, ROWS);
-  if (!pos) { crash(); schedule(); return; }
   if (collidesWithSelf(G.snake, pos)) { crash(); schedule(); return; }
+  const head = G.snake[0];
+  const isWrap = Math.abs(head.x - pos.x) > 1 || Math.abs(head.y - pos.y) > 1;
+  G.wrapGhost = isWrap ? {
+    entryFrom: { x: pos.x - G.dir.x, y: pos.y - G.dir.y }, // one cell outside entry wall
+    exitFrom:  { x: head.x, y: head.y },                    // old head position
+    exitTo:    { x: head.x + G.dir.x, y: head.y + G.dir.y }, // one cell past exit wall
+  } : null;
   const ti = G.tiles.findIndex(t => t.x === pos.x && t.y === pos.y);
   if (ti >= 0) { eatTile(ti, pos); schedule(); return; }
   G.snake = advance(G.snake, pos);
@@ -313,7 +320,7 @@ function startGame() {
     biome: 'garden', score: 0, lives: 3, target: 10, timeLeft: 26, timerMax: 26,
     frames: [{ tokens: [], acc: null, op: null }], history: [], snake: [],
     dir: { x: 1, y: 0 }, nextDir: { x: 1, y: 0 }, tiles: [],
-    tickMs: 160, baseTick: 160, running: false, solved: 0, longest: 0, noTrans: true
+    tickMs: 160, baseTick: 160, running: false, solved: 0, longest: 0, noTrans: true, wrapGhost: null
   };
   applyBiome('garden');
   app.dataset.screen = 'game';

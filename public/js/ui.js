@@ -78,18 +78,43 @@ export function renderGrid(G, cell, tokens) {
 
   // Body segments spell the running expression, most-recent token nearest the head.
   const bodyTokens = tokens.slice().reverse();
+  let headHTML = null;
   G.snake.forEach((p, i) => {
     const inner = i === 0
       ? `<div class="box head"><span class="eye l"></span><span class="eye r"></span></div>`
       : `<div class="box seg">${bodyTokens[i - 1] !== undefined ? bodyTokens[i - 1] : ''}</div>`;
-    ents.push({ k: 's' + i, x: p.x, y: p.y, html: inner });
+    if (i === 0) headHTML = inner;
+    const wrapFrom = (i === 0 && G.wrapGhost) ? G.wrapGhost.entryFrom : null;
+    ents.push({ k: 's' + i, x: p.x, y: p.y, html: inner, wrapFrom });
   });
+
+  // Exit ghost: a temporary head element that slides off the exit wall and fades out,
+  // giving the illusion the snake is traversing rather than teleporting.
+  if (G.wrapGhost && headHTML) {
+    const { exitFrom, exitTo } = G.wrapGhost;
+    const ghost = document.createElement('div');
+    ghost.className = 'ent notrans';
+    ghost.innerHTML = headHTML;
+    ghost.style.transform = `translate(${exitFrom.x * cell}px,${exitFrom.y * cell}px)`;
+    grid.appendChild(ghost);
+    ghost.offsetWidth; // force reflow
+    ghost.classList.remove('notrans');
+    ghost.style.transform = `translate(${exitTo.x * cell}px,${exitTo.y * cell}px)`;
+    ghost.style.opacity = '0';
+    setTimeout(() => ghost.remove(), 120);
+  }
 
   while (pool.length < ents.length) { const e = document.createElement('div'); e.className = 'ent'; grid.appendChild(e); pool.push(e); }
   while (pool.length > ents.length) { pool.pop().remove(); }
 
   ents.forEach((e, idx) => {
     const el = pool[idx];
+    if (e.wrapFrom) {
+      el.classList.add('notrans');
+      el.style.transform = `translate(${e.wrapFrom.x * cell}px,${e.wrapFrom.y * cell}px)`;
+      el.offsetWidth; // force reflow so browser registers the snap before animating
+      el.classList.remove('notrans');
+    }
     el.style.transform = `translate(${e.x * cell}px,${e.y * cell}px)`;
     el.classList.toggle('notrans', !!G.noTrans);
     if (el._html !== e.html) { el.innerHTML = e.html; el._html = e.html; }
@@ -173,7 +198,7 @@ export function helpHTML(title) {
     <div class="ov-sub" style="text-align:left;max-width:300px;">
       Eat a number, an operator, a number… to build a running total up to the <b style="color:var(--target)">MAKE</b> number — hit it and it auto-scores.<br><br>
       🔁 Only your <b>latest</b> number &amp; operator count — wrong bite? Just eat the right one next.<br>
-      🧱 Walls, your own tail, or the clock running out each cost a life.<br>
+      🌀 Hitting a wall wraps you to the opposite side — no penalty. Your own tail or the clock running out costs a life.<br>
       🌍 Climb Garden → Twilight → Inferno, where the <b>eraser</b> and <b>( )</b> unlock.
     </div>
     ${paused

@@ -33,7 +33,8 @@ Collect `6`, then `×`, then `4` → `6 × 4 = 24` ✓
 
 - Collect a number, an operator, a number… to build a running total.
 - Only your **latest** number and operator count — eat a better one to replace it.
-- Hitting a wall, biting your own tail, or letting the clock expire each costs a life.
+- Hitting a wall wraps the snake to the opposite side — no penalty.
+- Biting your own tail or letting the clock expire costs a life.
 - Three lives per run.
 
 ### Progression
