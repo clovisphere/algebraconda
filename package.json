@@ -1,0 +1,10 @@
+{
+  "name": "algebraconda",
+  "version": "1.0.0",
+  "description": "Snake meets algebra — slither, solve, survive.",
+  "type": "module",
+  "scripts": {
+    "dev": "bun server.js",
+    "test": "bun test"
+  }
+}

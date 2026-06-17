@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Algebraconda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+<div id="app" data-biome="garden" data-screen="menu">
+
+  <!-- ===================== MENU ===================== -->
+  <section id="menu" class="screen">
+    <div class="statusbar"><span>9:41</span><span class="batt"></span></div>
+    <div style="flex:1;display:flex;flex-direction:column;align-items:center;width:100%;">
+      <div class="tag">Slither · Solve · Survive</div>
+      <div class="wordmark">Algebraconda</div>
+      <div class="byline">built by <a href="https://github.com/clovisphere" target="_blank" rel="noopener" class="byline-link"><b>Clovisphere</b></a></div>
+
+      <div class="mascot">
+        <div class="m-body"></div>
+        <div class="m-belly"></div>
+        <div class="m-head">
+          <div class="eyes"><i></i><i></i></div>
+          <div class="m-tongue"></div>
+        </div>
+      </div>
+
+      <button class="btn btn-play" id="playBtn">Play</button>
+      <button class="btn btn-ghost" id="helpBtn">How to play</button>
+
+      <div class="journey">
+        <div class="node garden active"><div class="dot"></div><div class="nm">Garden</div><small>Start</small></div>
+        <div class="link"></div>
+        <div class="node twilight"><div class="dot"></div><div class="nm">Twilight</div><small>100 pts</small></div>
+        <div class="link"></div>
+        <div class="node inferno"><div class="dot"></div><div class="nm">Inferno</div><small>250 pts</small></div>
+      </div>
+
+      <div class="menu-foot">
+        <div class="best">Best <b id="bestMenu">0</b></div>
+        <button class="iconbtn" id="muteBtn" title="Sound">♪</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GAME ===================== -->
+  <section id="game" class="screen">
+    <div class="statusbar"><span>9:41</span><span class="batt"></span></div>
+    <div class="hud">
+      <div class="hud-row">
+        <div class="pill"><span class="pd"></span><span id="biomeName">Garden</span></div>
+        <div class="hud-right">
+          <div class="hearts" id="hearts"></div>
+          <button class="pause" id="pauseBtn"><i></i><i></i></button>
+        </div>
+      </div>
+      <div class="make-row">
+        <div class="stat"><div class="lab">Score</div><div class="val" id="score">0</div></div>
+        <div class="make"><div class="lab">Make</div><div class="val" id="target">10</div></div>
+        <div class="dial" id="dial"><div class="inner" id="timeTxt">0:26</div></div>
+      </div>
+      <div class="speed-row">
+        <span class="lab">Speed</span>
+        <div class="segs" id="segs"><span></span><span></span><span></span><span></span><span></span></div>
+        <span class="mult" id="mult">×1.0</span>
+      </div>
+    </div>
+
+    <div class="board-wrap">
+      <div id="board">
+        <div id="decor"></div>
+        <div id="grid"></div>
+        <div class="flash" id="flash"></div>
+      </div>
+    </div>
+
+    <div class="eqbar">
+      <div class="lab" id="eqLab">Your equation</div>
+      <div class="ribbon" id="ribbon"><span class="eq-empty">eat a number to begin…</span></div>
+    </div>
+
+    <div class="controls">
+      <div class="hint">Arrow keys, swipe, or tap the pad</div>
+      <div class="dpad">
+        <button class="u" data-dir="up">▲</button>
+        <button class="l" data-dir="left">◀</button>
+        <button class="c" disabled></button>
+        <button class="r" data-dir="right">▶</button>
+        <button class="d" data-dir="down">▼</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OVERLAY ===================== -->
+  <div id="overlay">
+    <div class="scrim"></div>
+    <div class="ov-card" id="ovCard"></div>
+  </div>
+
+</div>
+<script type="module" src="public/js/main.js"></script>
+</body>
+</html>
