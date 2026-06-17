@@ -7,6 +7,7 @@
 ```
 
 [![Tests](https://github.com/clovisphere/algebraconda/actions/workflows/test.yml/badge.svg)](https://github.com/clovisphere/algebraconda/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Bun](https://img.shields.io/badge/Bun-1.2-black?logo=bun)](https://bun.sh)
 [![Vanilla JS](https://img.shields.io/badge/Vanilla_JS-ES2020-yellow?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
