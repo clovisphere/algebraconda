@@ -39,14 +39,30 @@ Collect `6`, then `×`, then `4` → `6 × 4 = 24` ✓
 
 Speed increases with every solve and drops on a miss.
 
-## Getting Started
+## Run locally
+
+**With Bun** — requires [Bun](https://bun.sh):
 
 ```bash
-bun server.js   # serve at http://localhost:3000
-bun test        # run the test suite
+bun server.js
 ```
 
-Requires [Bun](https://bun.sh). No other dependencies.
+**With Docker:**
+
+```bash
+make run   # builds the image and starts the container
+make stop  # stop and remove the container
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Run tests
+
+```bash
+bun test
+# or
+make test
+```
 
 ## Inspiration
 
